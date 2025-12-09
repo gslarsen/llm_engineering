@@ -218,3 +218,6 @@ week8/*.pth
 # pixi.toml
 pixi.lock
 .pixi/
+
+# VS Code / Cursor settings
+.vscode/
