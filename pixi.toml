@@ -1,0 +1,94 @@
+[workspace]
+name = "llm-engineering"
+version = "0.1.0"
+description = "LLM Engineering Course - Pixi configuration for Intel Mac"
+channels = ["conda-forge"]
+platforms = ["osx-64"]  # Intel Mac
+
+[dependencies]
+# Python version matching .python-version
+python = "3.12.*"
+
+# PyTorch from conda-forge - THE KEY REASON for using Pixi on Intel Mac
+# conda-forge has Intel Mac builds that pip doesn't have
+pytorch = "*"
+torchvision = "*"
+torchaudio = "*"
+
+# Core scientific stack - stable on conda
+numpy = ">=1.26"
+scipy = ">=1.11"
+
+# Jupyter from conda (well-tested)
+jupyterlab = ">=4.0"
+ipykernel = ">=6.29"
+ipywidgets = ">=8.1"
+
+# Pin fsspec to be compatible with datasets
+fsspec = "<=2025.10.0"
+
+[pypi-dependencies]
+# Everything else via pip to avoid conda/pip conflicts
+
+# Data science
+pandas = ">=2.0"
+scikit-learn = ">=1.3"
+matplotlib = ">=3.8"
+plotly = ">=5.20"
+
+# LLM Provider SDKs
+openai = ">=1.30"
+anthropic = ">=0.25"
+google-generativeai = ">=0.5"
+google-genai = ">=1.0"
+litellm = ">=1.40"
+ollama = ">=0.2"
+groq = ">=0.5"
+
+# LangChain ecosystem
+langchain = ">=0.2"
+langchain-core = ">=0.2"
+langchain-text-splitters = ">=0.2"
+langchain-openai = ">=0.1"
+langchain-chroma = ">=0.1"
+langchain-community = ">=0.2"
+langchain-huggingface = ">=0.0.3"
+langchain-ollama = ">=0.1"
+langchain-anthropic = ">=0.1"
+langchain-experimental = ">=0.0.40"
+
+# Vector store
+chromadb = ">=0.4"
+
+# HuggingFace ecosystem
+transformers = ">=4.40"
+sentence-transformers = ">=2.7"
+datasets = ">=3.0"
+tiktoken = ">=0.7"
+
+# ML and training
+wandb = ">=0.16"
+xgboost = ">=2.0"
+
+# UI
+gradio = ">=4.30"
+jupyter-dash = "*"
+
+# Utilities
+beautifulsoup4 = ">=4.12"
+requests = ">=2.31"
+python-dotenv = ">=1.0"
+tqdm = ">=4.66"
+psutil = ">=5.9"
+setuptools = ">=69"
+modal = ">=0.62"
+feedparser = ">=6.0"
+pydub = ">=0.25"
+speedtest-cli = ">=2.1"
+nbformat = ">=5.10"
+pyarrow = "*"
+
+[tasks]
+# Convenience tasks
+lab = "jupyter lab"
+day1 = "jupyter lab week1/day1.ipynb"

@@ -215,6 +215,6 @@ week6/*.pth
 week6/*.joblib
 week8/*.pth
 # Pixi (local package manager)
-pixi.toml
+# pixi.toml
 pixi.lock
 .pixi/
