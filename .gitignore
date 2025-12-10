@@ -214,6 +214,8 @@ week6/jsonl/
 week6/*.pth
 week6/*.joblib
 week8/*.pth
+
+# gsl additions for local development
 # Pixi (local package manager)
 # pixi.toml
 pixi.lock
